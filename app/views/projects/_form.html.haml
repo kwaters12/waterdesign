@@ -1,0 +1,18 @@
+= form_for @project do |f|
+  - if @project.errors.any?
+    %ul.alert_message
+      - @project.errors.messages.values.each do |message|
+        %li= message.join ","
+  .form-group
+    = f.label :title, "My Project"
+    = f.text_field :title, class: "form-control"
+  %br/
+  .form-group
+    = f.label :body, "Project Description"
+    = f.text_area :body, class: "form-control"
+    %br/
+  .form-group
+    = f.label :image
+    = f.file_field :image
+  = f.submit "Submit", class: "btn btn-default"
+  = link_to "Back", projects_path, class: "btn btn-default"

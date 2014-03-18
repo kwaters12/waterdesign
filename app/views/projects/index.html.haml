@@ -1,0 +1,5 @@
+%h1 Water Design
+- @projects.each do |project|
+  = project.title
+  = link_to (image_tag project.image(:medium), class: "post-thumb"), project
+  = project.body

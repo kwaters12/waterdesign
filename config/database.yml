@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: water_design_development
+  pool: 5
+  username: kellywaters 
+  password: 
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: water_design_test
+  pool: 5
+  username: kellywaters
+  password: 
