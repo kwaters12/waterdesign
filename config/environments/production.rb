@@ -80,8 +80,6 @@ Waterdesign::Application.configure do
 
   # Integrating Paperclip and Amazon S3
   config.paperclip_defaults = {
-  Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-  Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['waterdesign.ca'],

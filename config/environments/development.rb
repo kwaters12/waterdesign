@@ -28,11 +28,9 @@ Waterdesign::Application.configure do
   config.assets.debug = true
 
   config.paperclip_defaults = {
-  Paperclip::Attachment.default_options[:url] = ':s3_domain_url'
-  Paperclip::Attachment.default_options[:path] = '/:class/:attachment/:id_partition/:style/:filename'
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['waterdesign.ca'],
+    :bucket => ENV['waterdesign'],
     :access_key_id => ENV['AKIAIA4HCVTFS2CJLQBA'],
     :secret_access_key => ENV['Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU']
   }
