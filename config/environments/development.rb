@@ -26,4 +26,13 @@ Waterdesign::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['waterdesign.ca'],
+    :access_key_id => ENV['AKIAIA4HCVTFS2CJLQBA'],
+    :secret_access_key => ENV['Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU']
+  }
+  }
 end

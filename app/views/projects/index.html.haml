@@ -1,5 +1,11 @@
 %h1 Water Design
+.admin
+  = link_to "New Project", new_project_path, class: "btn btn-default"
 - @projects.each do |project|
-  = project.title
-  = link_to (image_tag project.image(:medium), class: "post-thumb"), project
-  = project.body
+  .col-md-4
+    = project.title
+    %br
+    .image
+      = link_to (image_tag project.image(:medium), class: "post-thumb"), project
+    %br
+    = project.body

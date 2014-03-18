@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = current_user.projects.new project_params
+    @project = Project.new project_params
     if @project.save
       redirect_to projects_path
     else
@@ -44,6 +44,12 @@ class ProjectsController < ApplicationController
     else
       redirect_to projects_path, notice: "Hey man, don't delete your buddy's project."      
     end    
+  end
+
+  private
+
+  def find_project
+    @project = Project.find(params[:id])
   end
 
 end
