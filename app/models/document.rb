@@ -3,7 +3,7 @@ class Document < ActiveRecord::Base
   # Environment-specific direct upload url verifier screens for malicious posted upload locations.
   if Rails.env.development?
     DIRECT_UPLOAD_URL_FORMAT = /\Ahttps:\/\/s3-us-west-2\.amazonaws\.com\/waterdesigndev\/(?<path>uploads(?<filename>.+))\z/i
-  else
+  elsif Rails.env.production?
     DIRECT_UPLOAD_URL_FORMAT = /\Ahttps:\/\/s3-us-west-2\.amazonaws\.com\/waterdesign\/(?<path>uploads(?<filename>.+))\z/i
   end
 
