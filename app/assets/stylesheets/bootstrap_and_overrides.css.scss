@@ -1,4 +1,246 @@
 @import 'bootstrap';
 
 $lightBlue: #11a3ef;
-.image {border: 3px solid $lightBlue;}
+$blue2: #084C6F;
+$blue3: #0E81BC;
+$blue4: #5BC1F4;
+$darkGrey: #043249;
+
+html {height: 100%;}
+body {
+  font-family: 'Vegur Light', Arial, sans-serif;
+  font-size: 1.5em;
+  margin: 0px auto; 
+  margin-top: -10px;
+  height: 100%;
+  width: 100%;
+  background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); 
+  // border-left: 15px solid black;
+}
+strong {font-family: 'Vegur', Arial, sans-serif; }
+section {margin-top: -5px; padding: 50px 75px; min-height: 100%; width: 100%; border: none; color: white;}
+.main {background-color: $lightBlue; text-align: center;}
+.intro {padding-top: 8%;}
+.web {background-color: $blue2;}
+.graphic {background-color: $blue3;}
+.graphic-box {float: left; width: 31%; margin-left: 1%; margin-right: 1%; margin-top: 20px;}
+.product { background-color: $blue4;}
+.info {background-color: $darkGrey; text-align: center;}
+.info i {font-size: 4em; padding-left: 20px; padding-top: 30px;}
+.info i:hover {color: $blue4}
+.project {margin-bottom: 30px;}
+.words {
+  position: relative;
+  z-index: 3; 
+  width: 70%; 
+  margin: 0 auto; 
+  background-color: $lightBlue;
+  padding: 20px 10px 20px 10px; 
+  min-width: 400px; 
+  text-align: center;
+  // -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  // -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  // box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+}
+.words-graphic {
+  background-color: $blue2;
+ width: 31%;
+ float: left;
+ height: 150px;
+}
+.words-product {
+  background-color: $blue3;
+}
+h2 {padding: 0; line-height: 1;font-family: 'Ubuntu Mono', Arial, sans-serif; }
+h3 {font-family: 'Vegur Light', sans-serif; line-height: 1.5;}
+h3 strong {font-family: 'Vegur', sans-serif;}
+h4 {font-family: 'BlockFont'; font-size: 3em; text-align: center; }
+.title {width: 400px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;}
+.title-web {background: $lightBlue; color: $blue2; }
+.title-graphic {background: $blue2; color: $blue3; }
+.title-product {background: $blue3; color: $blue4; }
+.title-info{background: $blue4; color: $darkGrey; }
+.peace {padding-top: 10%;}
+a {color: white;}
+a:hover {color: $lightBlue;  text-decoration: none;}
+.container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
+.navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px;}
+.navbar-fixed-top {padding: 0; background-color: $darkGrey;}
+.navbar-inverse .navbar-nav {
+  li {
+    a {
+      color: #dfdfdf;
+      .hover {
+        color: #cacaca;
+      }
+    }
+  }
+  .active {
+    a {
+      background-color: $lightBlue;
+      margin-bottom: 0;
+      padding-bottom: 20px;
+      ::hover {color: red;}
+    }
+  }
+  ::hover {
+    a {
+      background-color: $lightBlue;
+    }
+  }
+}
+#main-nav {background-color: $lightBlue; padding-bottom: 20px;}
+#web-nav {background-color: $blue2; padding-bottom: 20px;}
+#graphic-nav {background-color: $blue3; padding-bottom: 20px;}
+#product-nav {background-color: $blue4; padding-bottom: 20px;}
+.web-scroll {background-color: red;}
+.clear { clear: both; display: inline-block;}
+.titles {font-family: 'BlockFont';}
+.icon {font-size: 1.5em;}
+.image {
+  position: relative; 
+  z-index: 2; 
+  margin: 0 auto;
+  border: 2px solid $lightBlue; 
+  width: 70%; 
+  min-width: 400px; 
+  overflow: hidden;
+  // -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  // -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  // box-shadow: 4px 0px 21px 0px rgba(18,18,18,0.3);
+}
+.image-graphic { 
+  position: relative; 
+  z-index: 2; 
+  margin: 0 auto;
+  border: 2px solid $blue2; 
+  width: 31%;
+  float: left; 
+  min-width: 400px; 
+  overflow: hidden;
+  // -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  // -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  // box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+}
+.image-product {
+  border: 2px solid $blue3;
+}
+.image:hover {
+  border: 2px solid $lightBlue;
+  // -webkit-box-shadow: inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
+  // -moz-box-shadow:    inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
+  // box-shadow:         inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
+}
+.image-graphic:hover {
+   -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.image-product:hover {
+  border: 2px solid $blue3;
+}
+.image img {width: 100%; min-width: 400px; float: left;}
+.image-graphic img {width: 100%; min-width: 400px; overflow: hidden;}
+#name {float: right; margin-top: 10px; margin-right: 50px; display: block;}
+.show {
+  padding-top: 150px;
+  .graphic {background-color: $blue3;}
+  .product {background-color: $blue4;}
+}
+.project-form {background-color: $lightBlue; padding-left: 50px; padding-right: 50px; height: 100%; color: white; padding-top: 100px; margin-top: 0;}
+
+
+// Code for JS gallery.. WIP
+.fader{
+    position: relative;
+    padding-top: 60%;
+    overflow: hidden;
+} 
+ 
+.fader .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    // opacity: 0;
+}
+ 
+.fader img.slide{
+    height: auto;
+}
+
+@media (min-width: 1200px) and (max-width: 1390px) {
+  .graphic { width: 100%; padding-left: 0; padding-right: 0; margin: 0 auto;}
+  .container{ margin: 0 auto;  /* Lets the background show on the left and 
+  right edges of desktops */}
+  .image-graphic { /* Whenever you float, you must have a width. What is the
+  left and right margin? Look above for the answer. */}
+  .image {width: 70%;}
+  // .graphic-box {width: 40%; margin-left: 9%;}
+  .image-graphic p {min-height: 175px; /* Compensates for shorter and longer paragraphs
+    so the Learn More button is at the same place in each section */ line-height: 1.25; }
+  footer section { float: left; width: 25%; margin: 0em; padding: 0em;}
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+  
+  .container{ margin: 0 auto;  /* Lets the background show on the left and 
+  right edges of desktops */}
+  .graphic { margin-left: 0; margin-right: 0; padding-left: 2%; padding-right: 0;}
+  .image {width: 100%;}
+  .words {width: 100%;}
+  .image-graphic { width: 100%;margin: 0 auto;}
+  .words-graphic { width: 100%;margin: 0 auto;}
+  .graphic-box {width: 40%; text-align: center; margin-right: 4.5%; margin-left: 4.5%;}
+  .image-graphic p {min-height: 175px; /* Compensates for shorter and longer paragraphs
+    so the Learn More button is at the same place in each section */ line-height: 1.25; }
+  footer section { float: left; width: 25%; margin: 0em; padding: 0em;}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  
+  .container { margin: 0 auto; width: 100%;}
+  .image {width: 100%;}
+  .words {width: 100%;}
+  .words-graphic {width: 100%;}
+  .graphic-box {width: 100%;}
+  .image-graphic { width: 100%;overflow: hidden; }
+  .image-graphic h2 { font-size: 1.5em;}
+  .image-graphic p { line-height: 1.5; font-size: 1.25em; }
+  .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
+  footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar-fixed-top {display: none;}
+  .container{ margin: 0 auto; }
+  .graphic-box {width: 100%; padding: 0; margin: 0;}
+
+  .image-graphic { width: 100%; overflow: hidden;}
+  section {padding: 0;padding-bottom: 30px;}
+  .image {width: 100%;}
+  .words {width: 100%;}
+  .words {background-color: $blue2;}
+  .words-graphic {background-color: $blue3;}
+  .project {margin: 0 auto; padding: 0;}
+  .image-graphic p { min-height: 150px;}
+  .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
+  footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
+  .words {border: none;}
+
+}
+
+
+
+@media (max-width: 480px) {
+  .project {margin: 0; padding: 0;}
+  .navbar-fixed-top {display: none;}
+  .container {margin: 0 auto; width: 100%;}
+  section {padding-left: 0; padding-right: 0;}
+  .words {border: none; margin-top: 0;}
+  // header p { display: none; /* Hide superfluous text */}
+  .image-graphic { float: none; width: 98%; font-size: 1.25em; }
+  // .button { font-weight: bold; font-size: 1.25em; text-transform: uppercase;}
+  // footer section { float: none; width: 100%; }
+}

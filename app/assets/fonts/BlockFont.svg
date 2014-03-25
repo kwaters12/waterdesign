@@ -1,0 +1,91 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontPrep 20130207 at Mon Mar 24 23:38:41 2014
+ By Kelly Waters
+</metadata>
+<defs>
+<font id="59b770e0a323fbefe52e47c267b2400a" horiz-adv-x='1024' >
+  <font-face 
+    font-family="BlockFont"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="0 0 0 0 0 0 0 0 0 0"
+    ascent="1536"
+    descent="-512"
+    cap-height="1536"
+    bbox="-12 -524 1565 1542"
+    underline-thickness="102"
+    underline-position="-102"
+    unicode-range="U+000D-005A"
+  />
+<missing-glyph horiz-adv-x="1024" 
+ />
+    <glyph glyph-name=".notdef" horiz-adv-x="1024" 
+ />
+    <glyph glyph-name=".null" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="nonmarkingreturn" unicode="&#xd;" horiz-adv-x="1024" 
+ />
+    <glyph glyph-name="NULL" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="NULL" horiz-adv-x="0" 
+ />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="1024" 
+ />
+    <glyph glyph-name="A" unicode="A" 
+d="M725 1530l723 -2048h-1448z" />
+    <glyph glyph-name="B" unicode="B" 
+d="M420 514l725 -448l-725 -576v1024zM420 1536l725 -444l-725 -570v1014z" />
+    <glyph glyph-name="C" unicode="C" 
+d="M1247 -508l-1247 846l217 178l1235 -854zM1247 1542l205 -170l-1235 -854l-217 178z" />
+    <glyph glyph-name="D" unicode="D" 
+d="M1321 498l-1208 -1022v2048z" />
+    <glyph glyph-name="E" unicode="E" 
+d="M213 618h449l208 -206h-643v-623l88 -98l969 -2l168 -203h-1305l-147 180v1716l176 152h1071l207 -188h-1163l-78 -76v-652z" />
+    <glyph glyph-name="F" unicode="F" 
+d="M213 621h449l208 -207h-643v-924l-227 178v1716l176 152h1071l207 -188h-1163l-78 -76v-651z" />
+    <glyph glyph-name="G" unicode="G" 
+d="M434 1114v-1618l-434 1024l434 1016l1020 -422h-1020zM1356 49l-629 293h725l-276 -846h-742l41 25q41 25 105.5 63.5t147.5 89t169 101.5z" />
+    <glyph glyph-name="H" unicode="H" 
+d="M1069 653v-284h-688v284h688zM1454 -512h-285v2048h285v-2048zM285 -512h-285v2048h285v-2048z" />
+    <glyph glyph-name="I" unicode="I" 
+d="M868 -512h-284v2048h284v-2048z" />
+    <glyph glyph-name="J" unicode="J" 
+d="M948 -518l-928 242l101 514zM1231 -516h-283v2048h283v-2048z" />
+    <glyph glyph-name="K" unicode="K" 
+d="M1454 1536v-2048l-1005 1024zM285 -512h-285v2048h285v-2048z" />
+    <glyph glyph-name="L" unicode="L" 
+d="M358 -512v285h1096v-285h-1096zM285 -512h-285v2048h285v-2048z" />
+    <glyph glyph-name="M" unicode="M" 
+d="M729 -512l340 2048l387 -2050zM0 -512l340 2048l387 -2048h-727z" />
+    <glyph glyph-name="N" unicode="N" 
+d="M1167 -266l-579 1800h573zM473 -512v1599l463 -1599h-463z" />
+    <glyph glyph-name="O" unicode="O" 
+d="M1214 -154h-952v1377h952v-1377z" />
+    <glyph glyph-name="P" unicode="P" 
+d="M1239 1022l-729 -512v1026zM289 -512h-285v2048h285v-2048z" />
+    <glyph glyph-name="Q" unicode="Q" 
+d="M1157 -154h-952v1377h952v-1377zM1317 -512v430l248 -430h-248z" />
+    <glyph glyph-name="R" unicode="R" 
+d="M1239 1022l-729 -512v1026zM1235 -367l-238 -151l-475 749l240 152zM285 -516h-285v2048h285v-2048z" />
+    <glyph glyph-name="S" unicode="S" 
+d="M0 1024l725 512l727 -514l-1141 2l1139 -1024h2l-1 -1l1 -1l-201 -141l-1 1l-525 -370l-725 512h1097l-1097 1022l3 2h-3z" />
+    <glyph glyph-name="T" unicode="T" 
+d="M0 1251v285h1454v-285h-1454zM868 -512h-284v1714h284v-1714z" />
+    <glyph glyph-name="U" unicode="U" 
+d="M1311 1536h143v-2048h-139v-2l-289 2l285 341v1707zM143 -512l-2 173v171l285 -344h-283zM141 -512h-141v2048h141v-1704l-2 2l2 -173v-173z" />
+    <glyph glyph-name="V" unicode="V" 
+d="M1454 -514h-510l510 2048v-2048zM0 -514v2048l510 -2048h-510z" />
+    <glyph glyph-name="W" unicode="W" 
+d="M1450 1536l-360 -2048l-363 2048h723zM725 1536l-356 -2048l-363 2048h719z" />
+    <glyph glyph-name="X" unicode="X" 
+d="M1454 -289l-516 797l516 747v-1544zM0 1255l516 -747l-516 -797v1544zM1225 1532l-500 -723l-537 723h1037zM188 -516l537 723l500 -723h-1037z" />
+    <glyph glyph-name="Y" unicode="Y" 
+d="M-12 1526h1452l-725 -674zM571 -522v1304l142 -125l143 125v-1304h-285z" />
+    <glyph glyph-name="Z" unicode="Z" 
+d="M10 1282h1088l-1088 -1479v1479zM1464 -197h-1085l1085 1481v-1481z" />
+  </font>
+</defs></svg>

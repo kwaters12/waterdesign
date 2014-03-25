@@ -15,6 +15,7 @@ Waterdesign::Application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
+   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -30,7 +31,7 @@ Waterdesign::Application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
-    :bucket => ENV['waterdesign'],
+    :bucket => ENV['waterdesign.ca'],
     :access_key_id => ENV['AKIAIA4HCVTFS2CJLQBA'],
     :secret_access_key => ENV['Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU']
   }

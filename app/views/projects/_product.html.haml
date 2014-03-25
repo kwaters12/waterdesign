@@ -1,0 +1,22 @@
+%section.product.clear{ id: "product" } 
+  %h4.title.title-product PRODUCT 
+  - @projects.each do |project|
+    -if project.project_type === "Product"
+      .graphic-box
+        .image.image-product     
+          = link_to (image_tag project.documents.first.direct_upload_url), project         
+        .words.words-graphic.words-product
+          <strong>Title: </strong>          
+          = link_to "#{project.title}", project_path(project)
+          %br
+          <strong>Description: </strong>
+          = project.body
+          %br
+          <strong>Client: </strong>
+          = project.client
+          %br
+          <strong>Tech: </strong>
+          = project.tech
+          %br
+          -if current_user.is_admin
+            = link_to "edit", edit_project_path(project)

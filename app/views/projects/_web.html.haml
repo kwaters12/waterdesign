@@ -1,0 +1,25 @@
+%section.web.clear{ id: "web" }  
+  %h4.title.title-web WEB 
+  - @projects.each do |project|
+    -if project.project_type === "Web"
+      .project                  
+        - if project.documents.count > 0
+          .image
+            = link_to (image_tag project.documents.first.direct_upload_url), project   
+          .words
+            <strong>Title: </strong>          
+            = link_to "#{project.title}", project_path(project)
+            %br
+            <strong>Description: </strong>
+            = project.body
+            %br
+            <strong>Client: </strong>
+            = project.client
+            %br
+            <strong>Tech: </strong>
+            = project.tech
+            %br
+            -if current_user.is_admin
+              = link_to "edit", edit_project_path(project)
+:javascript
+  $('.ilightbox3').iLightBox();

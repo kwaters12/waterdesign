@@ -78,13 +78,4 @@ Waterdesign::Application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-  # Integrating Paperclip and Amazon S3
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['waterdesign.ca'],
-    :access_key_id => ENV['AKIAIA4HCVTFS2CJLQBA'],
-    :secret_access_key => ENV['Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU']
-  }
-  }
 end

@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :find_project, except: [:index, :create, :new]
 
   def index
@@ -10,7 +11,9 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new project_params
+    @project = current_user.projects.new project_params     
+    # @project.document = @project.documents.create!(params.require(:document).permit([:direct_upload_url]))
+    # render nothing: true
     if @project.save
       redirect_to projects_path
     else
@@ -19,7 +22,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    
+    session[:project_id] = @project.id
   end
 
   def edit
@@ -27,7 +30,7 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit([:title, :body, :image])
+    params.require(:project).permit([:title, :body, :project_type, :client, :tech, :link])
   end
 
   def update
@@ -49,7 +52,7 @@ class ProjectsController < ApplicationController
   private
 
   def find_project
-    @project = Project.find(params[:id])
+    @project = current_user.projects.find(params[:id])
   end
 
 end

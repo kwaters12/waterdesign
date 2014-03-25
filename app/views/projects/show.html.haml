@@ -1,2 +1,24 @@
-%h1= @project.title
-= image_tag @project.image(:medium)
+- if @project.project_type === "Web"
+  .show.web
+    %h1= @project.title
+    = @project.project_type
+    - @project.documents.each do |document|
+      .image
+        = image_tag document.direct_upload_url
+    = render 'document_form'
+- elsif @project.project_type === "Graphic"
+  .show.graphic
+    %h1= @project.title
+    = @project.project_type
+    - @project.documents.each do |document|
+      .image
+        = image_tag document.direct_upload_url
+    = render 'document_form'
+- elsif @project.project_type === "Product"
+  .show.product
+    %h1= @project.title
+    = @project.project_type
+    - @project.documents.each do |document|
+      .image
+        = image_tag document.direct_upload_url
+    = render 'document_form'

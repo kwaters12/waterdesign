@@ -1,0 +1,76 @@
+%nav.navbar-inverse.navbar-fixed-top
+  %ul.nav.navbar-nav.titles
+    %li.active
+      - if request.original_url === root_url
+        %a{href: "#main", id: "main-nav"}KW
+      - else
+        = link_to "KW", root_url
+    %li
+      %a{href: "#web", id: "web-nav"} WEB
+    %li
+      %a{href: "#graphic", id: "graphic-nav"} GRAPHIC 
+    %li
+      %a{href: "#product", id: "product-nav"} PRODUCT
+    %li.icon
+      %a{href: "http://www.github.com/kwaters12"}
+        %i.fa.fa-github
+    %li.icon
+      %a{href: "http://www.linkedin.com/pub/kelly-waters/13/611/794"}
+        %i.fa.fa-linkedin
+    %li.icon
+      %a{href: "http://www.twitter.com/kellyminjaro"}
+        %i.fa.fa-twitter 
+    %li.icon
+      %a{href: "http://kellywaters.tumblr.com/"}
+        %i.fa.fa-tumblr
+    
+    - if current_user && current_user.is_admin
+      %li
+        = link_to "NEW PROJECT", new_project_path
+:javascript
+  $('#web').waypoint(function(direction) {
+      if (direction === 'down') {
+          $("#web-nav").animate({backgroundColor: 'rgba(25,148,255,0.5)'},5000)
+       }
+       else {
+          $("#web-nav").animate({backgroundColor: 'rgba(240,255,0,0.5)'},5000)
+       }
+    });
+    $("#web").waypoint(function(event, direction) {
+       if (direction === 'down') {
+          $("#web-nav").animate({backgroundColor: 'rgba(25,148,255,0.5)'},5000)
+       }
+       else {
+          $("#web-nav").animate({backgroundColor: 'rgba(240,255,0,0.5)'},5000)
+       }
+    });
+
+    $("#graphic").waypoint(function(event, direction) {
+       if (direction === 'down') {
+          $("body").animate({backgroundColor: 'rgba(255,0,0,0.5)'},5000)
+       }
+       else {
+          $("body").animate({backgroundColor: 'rgba(25,148,255,0.5)'},5000)
+       }
+    });
+
+    $("#product").waypoint(function(event, direction) {
+       if (direction === 'down') {
+          $("body").animate({backgroundColor: 'rgba(96,0,179,0.5)'},5000)
+       }
+       else {
+          $("body").animate({backgroundColor: 'rgba(255,0,0,0.5)'},5000)
+       }
+    });
+
+    $("#contact").waypoint(function(event, direction) {
+       if (direction === 'down') {
+          $("body").animate({backgroundColor: 'rgba(60,200,0,0.5)'},5000)
+       }
+       else {
+          $("body").animate({backgroundColor: 'rgba(96,0,179,0.5)'},5000)
+       }
+    });
+
+
+

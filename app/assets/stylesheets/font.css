@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'BlockFont';
+  src: url('BlockFont.eot'); /* IE9 Compat Modes */
+  src: url('BlockFont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('BlockFont.woff') format('woff'), /* Modern Browsers */
+       url('BlockFont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('BlockFont.svg#59b770e0a323fbefe52e47c267b2400a') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Vegur';
+  src: url('Vegur-Regular.eot'); /* IE9 Compat Modes */
+  src: url('Vegur-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vegur-Regular.woff') format('woff'), /* Modern Browsers */
+       url('Vegur-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vegur-Regular.svg#cc3bcc84968dd7b3a781ee7bfaa4665a') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+@font-face {
+  font-family: 'Vegur Light';
+  src: url('Vegur-Light.eot'); /* IE9 Compat Modes */
+  src: url('Vegur-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Vegur-Light.woff') format('woff'), /* Modern Browsers */
+       url('Vegur-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Vegur-Light.svg#cb10dbcaeac9c8f6bae2612f3441e15f') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  200;
+}
+

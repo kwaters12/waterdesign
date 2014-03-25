@@ -1,0 +1,25 @@
+%section.graphic.clear{ id: "graphic" } 
+  %h4.title.title-graphic GRAPHIC 
+  - @projects.each do |project|
+    -if project.project_type === "Graphic"
+      .graphic-box
+        .image-graphic
+          = link_to (image_tag project.documents.first.direct_upload_url), project
+        .words.words-graphic
+          <strong>Title: </strong>          
+          = link_to "#{project.title}", project_path(project)
+          %br
+          <strong>Description: </strong>
+          = project.body
+          %br
+          <strong>Client: </strong>
+          = project.client
+          %br
+          <strong>Tech: </strong>
+          = project.tech
+          %br
+          -if current_user.is_admin
+            = link_to "edit", edit_project_path(project)
+
+// :javascript
+//   easyFader($('#Fader'),7000,800);

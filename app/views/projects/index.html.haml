@@ -1,11 +1,128 @@
-%h1 Water Design
-.admin
-  = link_to "New Project", new_project_path, class: "btn btn-default"
-- @projects.each do |project|
-  .col-md-4
-    = project.title
+%section.main{ id: "main"}
+  .intro
+    %h2 Hello. My name is Kelly Waters. I am a developer and designer from Canada.
+    %h2 Here's some of what I can do:
     %br
-    .image
-      = link_to (image_tag project.image(:medium), class: "post-thumb"), project
     %br
-    = project.body
+    %br
+    %h3 <strong>Web: </strong> Ruby on Rails (this site), HTML (Haml), CSS (Sass), Javascript (Coffee), jQuery, AWS
+    %h3 <strong>Graphic: </strong> 3ds Max, Maya, Cinema 4D, After Effects, Adobe, Drawing, Typography
+    %h3 <strong>UX: </strong> Ideation, Research, Wireframing, User Testing, Information Design
+    %br
+    %br
+    %br
+    %br
+    
+    = image_tag 'http://waterdesign.s3.amazonaws.com/arrow.png'
+= "#{print @projects.last.project_type}"
+%section.web.clear{ id: "web" }  
+  %h4.title.title-web WEB 
+  - @projects.each do |project|
+    -if project.project_type === "Web"      
+      .project                  
+        - if project.documents.count > 0
+          .image
+            = link_to (image_tag project.documents.first.direct_upload_url), project.link  
+        .words
+          <strong>Title: </strong>          
+          = link_to "#{project.title}", project_path(project)
+          %br
+          <strong>Description: </strong>
+          = project.body
+          %br
+          <strong>Client: </strong>
+          = project.client
+          %br
+          <strong>Tech: </strong>
+          = project.tech
+          %br
+          -if current_user.is_admin
+            = link_to "edit", edit_project_path(project)
+  - @projects.each do |poo|
+    %h1= poo.title
+%section.graphic.clear{ id: "graphic" } 
+  %h4.title.title-graphic GRAPHIC 
+  - @projects.each do |project|
+    -if project.project_type === "Graphic"
+      .graphic-box
+        - if project.documents.count > 0
+          .image-graphic
+            = link_to (image_tag project.documents.first.direct_upload_url), project
+        .words.words-graphic
+          <strong>Title: </strong> 
+          - if project.user === current_user         
+            = link_to "#{project.title}", project_path(project)
+          - else
+            = project.title
+          %br
+          <strong>Description: </strong>
+          = project.body
+          %br
+          <strong>Client: </strong>
+          = project.client
+          %br
+          <strong>Tech: </strong>
+          = project.tech
+          %br
+          -if current_user.is_admin
+            = link_to "edit", edit_project_path(project)
+
+%section.product.clear{ id: "product" } 
+  %h4.title.title-product PRODUCT 
+  - @projects.each do |project|
+    -if project.project_type === "Product"
+      .graphic-box
+        - if project.documents.count > 0
+          .image.image-product     
+            = link_to (image_tag project.documents.first.direct_upload_url), project         
+        .words.words-graphic.words-product
+          <strong>Title: </strong>          
+          = link_to "#{project.title}", project_path(project)
+          %br
+          <strong>Description: </strong>
+          = project.body
+          %br
+          <strong>Client: </strong>
+          = project.client
+          %br
+          <strong>Tech: </strong>
+          = project.tech
+          %br
+          -if current_user.is_admin
+            = link_to "edit", edit_project_path(project)
+
+%section.info
+  %h4.title.title-info CONCTACT
+  %h2.peace Thanks for browsing. I love working on cool projects, so feel free to contact me if you have something you think I can help with.
+  %a{href: "http://www.github.com/kwaters12"}
+    %i.fa.fa-github
+  %a{href: "http://www.linkedin.com/pub/kelly-waters/13/611/794"}
+    %i.fa.fa-linkedin
+  %a{href: "http://www.twitter.com/kellyminjaro"}
+    %i.fa.fa-twitter 
+  %a{href: "http://kellywaters.tumblr.com/"}
+    %i.fa.fa-tumblr
+  %h2 Also, you could email me or download my resume for more info:  
+  %a{href: "mailto:kellywaters@gmail.com?Subject=Work", target: "_top"}
+    %i.fa.fa-envelope 
+  %a{href: "http://waterdesign.s3.amazonaws.com/KellyWatersResume_Development.pdf"}
+    %i.fa.fa-download
+  %h2 Thanks again!
+
+:javascript
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+
+ 

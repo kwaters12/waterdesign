@@ -1,0 +1,13 @@
+defaults: &defaults
+  access_key_id: "AKIAIA4HCVTFS2CJLQBA"
+  secret_access_key: "Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU"
+development:
+  <<: *defaults
+  bucket: "waterdesign.ca.s3.amazonaws.com"
+test:
+  <<: *defaults
+  bucket: "waterdesign.ca.test"
+production:
+  access_key_id: <%=ENV["AWS_ACCESS_KEY_ID"]%>
+  secret_access_key: <%=ENV["AWS_SECRET_ACCESS_KEY"]%>
+  bucket: "waterdesign.s3.amazonaws.com"

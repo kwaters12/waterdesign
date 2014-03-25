@@ -14,7 +14,12 @@ gem 'will_paginate'
 gem 'quiet_assets'
 gem 'acts-as-taggable-on'
 gem 'aws-sdk'
+gem 's3_direct_upload'
 gem 'rails_12factor', group: :production
+gem 'devise'
+gem 'delayed_job_active_record'
+gem 'rails-erd'
+gem 'font-awesome-sass'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
