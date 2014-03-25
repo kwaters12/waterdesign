@@ -4,7 +4,7 @@ class Document < ActiveRecord::Base
   if Rails.env.development?
     DIRECT_UPLOAD_URL_FORMAT = /\Ahttps:\/\/s3-us-west-2\.amazonaws\.com\/waterdesigndev\/(?<path>uploads(?<filename>.+))\z/i
   else
-    DIRECT_UPLOAD_URL_FORMAT = /\Ahttps:\/\/s3-us-west-2\.amazonaws\.com\/waterdesigndev\/(?<path>uploads(?<filename>.+))\z/i
+    DIRECT_UPLOAD_URL_FORMAT = /\Ahttps:\/\/s3-us-west-2\.amazonaws\.com\/waterdesign\/(?<path>uploads(?<filename>.+))\z/i
   end
 
   belongs_to :user
