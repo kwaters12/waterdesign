@@ -67,6 +67,7 @@ GEM
     haml (4.0.5)
       tilt
     hike (1.2.3)
+    hirb (0.7.1)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
@@ -180,6 +181,7 @@ DEPENDENCIES
   devise
   font-awesome-sass
   haml (~> 4.0.5)
+  hirb
   jbuilder (~> 1.2)
   jquery-rails
   paperclip (~> 4.1)

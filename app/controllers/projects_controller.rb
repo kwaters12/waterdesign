@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :find_project, except: [:index, :create, :new]
 
   def index
-    @projects = Project.page(params[:page]).per_page(10)
+    @projects = Project.all
   end
 
   def new

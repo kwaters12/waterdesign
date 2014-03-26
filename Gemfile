@@ -20,7 +20,7 @@ gem 'devise'
 gem 'delayed_job_active_record'
 gem 'rails-erd'
 gem 'font-awesome-sass'
-
+gem 'hirb'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
