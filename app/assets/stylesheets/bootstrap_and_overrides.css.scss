@@ -61,7 +61,11 @@ a:hover {color: $orange;  text-decoration: none;}
   background-color: $blue3;
 }
 
-.title {width: 400px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;}
+.title {width: 400px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(18,18,18,0.3);
+}
 .title-web {background: $lightBlue; color: $blue2; }
 .title-graphic {background: $blue2; color: $blue3; }
 .title-product {background: $blue3; color: $blue4; }
