@@ -1,7 +1,7 @@
 
 
 - if @project.project_type === "Web"
-  .show.web
+  .show.web.clear
     .home
       %h1= link_to "HOME", root_url
     .project-title
@@ -29,7 +29,7 @@
     - if current_user.is_admin   
       = render 'document_form'
 - elsif @project.project_type === "Graphic"
-  .show.graphic
+  .show.graphic.clear
     .home
       %h1= link_to "HOME", root_url
     .project-title-graphic
@@ -57,7 +57,7 @@
     - if current_user.is_admin
       = render 'document_form'
 - elsif @project.project_type === "Product"
-  .show.product
+  .show.product.clear
     .home
       %h1= link_to "HOME", root_url
     .project-title-product
