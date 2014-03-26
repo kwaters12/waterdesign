@@ -325,7 +325,11 @@ a:hover {color: $orange;  text-decoration: none;}
   .image-graphic p { min-height: 150px;}
   .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
   footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
-
+  .title {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 }
 
 
@@ -342,6 +346,10 @@ a:hover {color: $orange;  text-decoration: none;}
   .navbar-fixed-top {display: none;}
   .container {margin: 0 auto; width: 100%;}
   section {padding: 0;padding-bottom: 30px;}
- 
+  .title {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 
 }
