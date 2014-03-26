@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BlockFont';
-  src: url('fonts/BlockFont.eot'); /* IE9 Compat Modes */
-  src: url('fonts/BlockFont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/BlockFont.woff') format('woff'), /* Modern Browsers */
-       url('fonts/BlockFont.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/BlockFont.svg#59b770e0a323fbefe52e47c267b2400a') format('svg'); /* Legacy iOS */
+  src: font-url('/assets/fonts/BlockFont.eot'); /* IE9 Compat Modes */
+  src: font-url('/assets/fonts/BlockFont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('/assets/fonts/BlockFont.woff') format('woff'), /* Modern Browsers */
+       font-url('/assets/fonts/BlockFont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('/assets/fonts/BlockFont.svg#59b770e0a323fbefe52e47c267b2400a') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;
@@ -12,22 +12,22 @@
 
 @font-face {
   font-family: 'Vegur';
-  src: url('fonts/Vegur-Regular.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Vegur-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Vegur-Regular.woff') format('woff'), /* Modern Browsers */
-       url('fonts/Vegur-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Vegur-Regular.svg#cc3bcc84968dd7b3a781ee7bfaa4665a') format('svg'); /* Legacy iOS */
+  src: font-url('/assets/fonts/Vegur-Regular.eot'); /* IE9 Compat Modes */
+  src: font-url('/assets/fonts/Vegur-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('/assets/fonts/Vegur-Regular.woff') format('woff'), /* Modern Browsers */
+       font-url('/assets/fonts/Vegur-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('/assets/fonts/Vegur-Regular.svg#cc3bcc84968dd7b3a781ee7bfaa4665a') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  400;
 }
 @font-face {
   font-family: 'Vegur Light';
-  src: url('fonts/Vegur-Light.eot'); /* IE9 Compat Modes */
-  src: url('fonts/Vegur-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/Vegur-Light.woff') format('woff'), /* Modern Browsers */
-       url('fonts/Vegur-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('fonts/Vegur-Light.svg#cb10dbcaeac9c8f6bae2612f3441e15f') format('svg'); /* Legacy iOS */
+  src: font-url('/assets/fonts/Vegur-Light.eot'); /* IE9 Compat Modes */
+  src: font-url('/assets/fonts/Vegur-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       font-url('/assets/fonts/Vegur-Light.woff') format('woff'), /* Modern Browsers */
+       font-url('/assets/fonts/Vegur-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       font-url('/assets/fonts/Vegur-Light.svg#cb10dbcaeac9c8f6bae2612f3441e15f') format('svg'); /* Legacy iOS */
        
   font-style:   normal;
   font-weight:  200;
