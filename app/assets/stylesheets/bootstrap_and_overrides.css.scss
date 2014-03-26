@@ -25,10 +25,10 @@ h2 {padding: 0; line-height: 1;font-family: 'Ubuntu Mono', Arial, sans-serif; }
 h3 {font-family: 'Vegur Light', sans-serif; line-height: 1.5;}
 h3 strong {font-family: 'Vegur', sans-serif;}
 h4 {font-family: 'BlockFont'; font-size: 3em; text-align: center; }
-a {color: white;}
-a:hover {color: $orange;  text-decoration: none;}
+a {color: white; transition: color 0.2s ease;transition: background-color 0.2s ease;}
+a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; transition: background-color 0.2s ease;}
 
-.main {background-color: $lightBlue; text-align: center;}
+.main {background-color: $lightBlue; text-align: center; transition: color 0.2s ease;}
 .intro {padding-top: 8%;  }
 .web {background-color: $blue2;}
 .graphic {background-color: $blue3; margin: 0 auto;}
@@ -75,6 +75,10 @@ a:hover {color: $orange;  text-decoration: none;}
 .container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
 .navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px; color: red;}
 .navbar-fixed-top {padding: 0; background-color: $darkGrey;}
+.navbar .nav > li > a {
+  background-color: $lightBlue;
+  color: white;
+}
 
 #main-nav {background-color: $lightBlue; padding-bottom: 20px;}
 #web-nav {background-color: $blue2; padding-bottom: 20px;}
@@ -199,6 +203,7 @@ a:hover {color: $orange;  text-decoration: none;}
   padding-top: 100px;
   color: white;
   text-align: center;
+  height: 100%;
   .graphic {background-color: $blue3;}
   .product {background-color: $blue4;}
 }
