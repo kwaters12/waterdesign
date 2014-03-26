@@ -73,31 +73,9 @@ a:hover {color: $orange;  text-decoration: none;}
 .peace {padding-top: 10%;}
 
 .container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
-.navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px;}
+.navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px; color: red;}
 .navbar-fixed-top {padding: 0; background-color: $darkGrey;}
-.navbar-inverse .navbar-nav {
-  li {
-    a {
-      color: #dfdfdf;
-      .hover {
-        color: #cacaca;
-      }
-    }
-  }
-  .active {
-    a {
-      background-color: $lightBlue;
-      margin-bottom: 0;
-      padding-bottom: 20px;
-      ::hover {color: red;}
-    }
-  }
-  ::hover {
-    a {
-      background-color: $lightBlue;
-    }
-  }
-}
+
 #main-nav {background-color: $lightBlue; padding-bottom: 20px;}
 #web-nav {background-color: $blue2; padding-bottom: 20px;}
 #graphic-nav {background-color: $blue3; padding-bottom: 20px;}
@@ -224,14 +202,16 @@ a:hover {color: $orange;  text-decoration: none;}
   .graphic {background-color: $blue3;}
   .product {background-color: $blue4;}
 }
-.project-title { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $lightBlue; padding-top: 5px; padding-bottom: 5px;}
-.project-title-graphic { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $blue2; padding-top: 5px; padding-bottom: 5px;}
-.project-title-product { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $blue3; padding-top: 5px; padding-bottom: 5px;}
-.project-desc {margin: 0 auto; width: 50%;font-family: "Vegur Light"; background-color: $blue4; padding-top: 5px; padding-bottom: 5px;}
-.project-desc-graphic {margin: 0 auto; width: 50%;font-family: "Vegur Light"; background-color: $blue2; padding-top: 5px; padding-bottom: 5px;}
+.project-title { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $lightBlue; padding-top: 5px; padding-bottom: 5px; margin-bottom: 20px;}
+.project-title-graphic { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $blue2; padding-top: 5px; padding-bottom: 5px;margin-bottom: 20px;}
+.project-title-product { margin: 0 auto; width: 70%; font-family: "BlockFont"; background-color: $blue3; padding-top: 5px; padding-bottom: 5px;margin-bottom: 20px;}
+.project-desc {margin: 0 auto; width: 50%;font-family: "Vegur Light"; padding-top: 5px; padding-bottom: 5px;}
 .project-desc-graphic {margin: 0 auto; width: 50%;font-family: "Vegur Light"; background-color: $blue3; padding-top: 5px; padding-bottom: 5px;}
+.project-desc-product {margin: 0 auto; width: 50%;font-family: "Vegur Light"; background-color: $blue3; padding-top: 5px; padding-bottom: 5px;}
 .project-form {background-color: $lightBlue; padding-left: 50px; padding-right: 50px; height: 100%; color: white; padding-top: 100px; margin-top: 0;}
 .caption {font-family: "Vegur"; margin-bottom: 20px;}
+.home {display: none}
+
 
 // Code for JS gallery.. WIP
 .fader{
@@ -302,16 +282,19 @@ a:hover {color: $orange;  text-decoration: none;}
   .image-graphic p { line-height: 1.5; font-size: 1.25em; }
   .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
   footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
+
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .home {display: block;}
   .project-title-product {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
+  .project-title-graphic {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
   .project-desc {width: 70%;}
   .caption {width: 100%;}
   .navbar-fixed-top {display: none;}
   .container{ margin: 0 auto; }
   .graphic-box {width: 100%; height: 100%;padding: 0; margin: 0;}
-
+  .show {padding-top: 10px;}
   .image-graphic { width: 100%; overflow: hidden; height: 100%;}
   .image-product { width: 100%; overflow: hidden; height: 100%;}
   section {padding: 0;padding-bottom: 30px;}
@@ -335,9 +318,12 @@ a:hover {color: $orange;  text-decoration: none;}
 
 
 @media (max-width: 480px) {
+  .home {display: block;}
   .image {width: 100%; padding: 0; margin: 0;z-index: 10;}
   .image-graphic { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
   .image-product { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
+  .image-graphic-show {width: 100%;padding: 0; margin: 0;}
+  .image-product-show {width: 100%;padding: 0; margin: 0;}
   .words {border: none; background-color: $blue2; width: 100%;}
   .words-graphic {background-color: $blue3;}
   .words-product {background-color: $blue4;}
@@ -351,5 +337,8 @@ a:hover {color: $orange;  text-decoration: none;}
     -moz-box-shadow: none;
     box-shadow: none;
   }
-
+  .project-title-product {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
+  .project-title-graphic {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
+  .project-desc {width: 70%; padding-left: 5px; padding-right: 5px;}
+  .show {padding-top: 10px;}
 }

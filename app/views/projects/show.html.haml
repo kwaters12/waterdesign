@@ -1,5 +1,9 @@
+
+
 - if @project.project_type === "Web"
   .show.web
+    .home
+      %h1= link_to "HOME", root_url
     .project-title
       %h1= @project.title.upcase
       %br
@@ -26,6 +30,8 @@
       = render 'document_form'
 - elsif @project.project_type === "Graphic"
   .show.graphic
+    .home
+      %h1= link_to "HOME", root_url
     .project-title-graphic
       %h1= @project.title.upcase
       %br
@@ -52,6 +58,8 @@
       = render 'document_form'
 - elsif @project.project_type === "Product"
   .show.product
+    .home
+      %h1= link_to "HOME", root_url
     .project-title-product
       %h1= @project.title.upcase
       %br
