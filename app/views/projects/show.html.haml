@@ -1,24 +1,63 @@
 - if @project.project_type === "Web"
   .show.web
-    %h1= @project.title
-    = @project.project_type
+    .project-title
+      %h1= @project.title.upcase
+      %br
+      .project-desc
+        <strong>Description: </strong>
+        = @project.body
+        %br
+        <strong>Client: </strong>
+        = @project.client
+        %br
+        <strong>Tech: </strong>
+        = @project.tech 
     - @project.documents.each do |document|
       .image
-        = image_tag document.direct_upload_url
+        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+      .project-title.caption
+        = document.caption
+      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
     = render 'document_form'
 - elsif @project.project_type === "Graphic"
   .show.graphic
-    %h1= @project.title
-    = @project.project_type
+    .project-title-graphic
+      %h1= @project.title.upcase
+      %br
+      .project-desc
+        <strong>Description: </strong>
+        = @project.body
+        %br
+        <strong>Client: </strong>
+        = @project.client
+        %br
+        <strong>Tech: </strong>
+        = @project.tech 
     - @project.documents.each do |document|
-      .image
-        = image_tag document.direct_upload_url
+      .image-graphic-show
+        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+      .project-title-graphic.caption
+        = document.caption
+      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
     = render 'document_form'
 - elsif @project.project_type === "Product"
   .show.product
-    %h1= @project.title
-    = @project.project_type
+    .project-title-product
+      %h1= @project.title.upcase
+      %br
+      .project-desc
+        <strong>Description: </strong>
+        = @project.body
+        %br
+        <strong>Client: </strong>
+        = @project.client
+        %br
+        <strong>Tech: </strong>
+        = @project.tech 
     - @project.documents.each do |document|
-      .image
-        = image_tag document.direct_upload_url
+      .image-product-show
+        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+      .project-title-product.caption
+        = document.caption
+      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
     = render 'document_form'

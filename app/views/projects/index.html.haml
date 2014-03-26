@@ -37,6 +37,7 @@
           %br
           -if current_user.is_admin
             = link_to "edit", edit_project_path(project)
+            = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
   
 %section.graphic.clear{ id: "graphic" } 
   %h4.title.title-graphic GRAPHIC 
@@ -64,6 +65,7 @@
           %br
           -if current_user.is_admin
             = link_to "edit", edit_project_path(project)
+            = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 
 %section.product.clear{ id: "product" } 
   %h4.title.title-product PRODUCT 
@@ -88,6 +90,7 @@
           %br
           -if current_user.is_admin
             = link_to "edit", edit_project_path(project)
+            = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
 
 %section.info
   %h4.title.title-info CONCTACT

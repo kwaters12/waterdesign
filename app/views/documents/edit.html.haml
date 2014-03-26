@@ -1,0 +1,15 @@
+.project-form.clear
+  .image
+    = image_tag @document.direct_upload_url
+  = form_for @document do |f|
+    - if @document.errors.any?
+      %ul.alert_message
+        - @document.errors.messages.values.each do |message|
+          %li= message.join ","
+    .form-group
+      = f.label :caption, "Image Caption"
+      = f.text_area :caption, class: "form-control"
+      
+    = f.submit "Submit", class: "btn btn-default"
+    = link_to "Back", document_path(@document), class: "btn btn-default"
+    
