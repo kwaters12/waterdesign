@@ -205,10 +205,9 @@ a:hover {color: $lightBlue;  text-decoration: none;}
 
 @media (min-width: 1200px) and (max-width: 1390px) {
   .graphic { width: 100%; padding-left: 0; padding-right: 0; margin: 0 auto;}
+  .product{ width: 100%; padding-left: 0; padding-right: 0; margin: 0 auto;}
   .container{ margin: 0 auto;  /* Lets the background show on the left and 
   right edges of desktops */}
-  .image-graphic { /* Whenever you float, you must have a width. What is the
-  left and right margin? Look above for the answer. */}
   .image {width: 70%;}
   // .graphic-box {width: 40%; margin-left: 9%;}
   .image-graphic p {min-height: 175px; /* Compensates for shorter and longer paragraphs

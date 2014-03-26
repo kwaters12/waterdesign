@@ -5,6 +5,9 @@ Waterdesign::Application.routes.draw do
   resources :documents
 
   root 'projects#index'
+
+  get '/2013', :to => redirect('/Website/index.html')
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

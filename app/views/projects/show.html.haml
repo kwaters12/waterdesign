@@ -14,11 +14,16 @@
         = @project.tech 
     - @project.documents.each do |document|
       .image
-        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        - if current_user.is_admin
+          = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        -else
+          = image_tag document.direct_upload_url
       .project-title.caption
         = document.caption
-      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
-    = render 'document_form'
+      - if current_user.is_admin  
+        = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
+    - if current_user.is_admin   
+      = render 'document_form'
 - elsif @project.project_type === "Graphic"
   .show.graphic
     .project-title-graphic
@@ -35,11 +40,16 @@
         = @project.tech 
     - @project.documents.each do |document|
       .image-graphic-show
-        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        - if current_user.is_admin
+          = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        - else
+          = image_tag document.direct_upload_url
       .project-title-graphic.caption
         = document.caption
-      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
-    = render 'document_form'
+      - if current_user.is_admin
+        = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
+    - if current_user.is_admin
+      = render 'document_form'
 - elsif @project.project_type === "Product"
   .show.product
     .project-title-product
@@ -56,8 +66,13 @@
         = @project.tech 
     - @project.documents.each do |document|
       .image-product-show
-        = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        - if current_user.is_admin
+          = link_to (image_tag document.direct_upload_url), edit_document_path(document)
+        - if current_user.is_admin
+          = image_tag document.direct_upload_url
       .project-title-product.caption
         = document.caption
-      = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
-    = render 'document_form'
+      - if current_user.is_admin
+        = link_to 'delete', document, method: :delete, data: { confirm: 'Are you sure?' }
+    - if current_user.is_admin
+      = render 'document_form'
