@@ -5,6 +5,8 @@ $blue2: #084C6F;
 $blue3: #0E81BC;
 $blue4: #5BC1F4;
 $darkGrey: #043249;
+$orange: #f8a134;
+
 
 html {height: 100%;}
 body {
@@ -24,17 +26,17 @@ h3 {font-family: 'Vegur Light', sans-serif; line-height: 1.5;}
 h3 strong {font-family: 'Vegur', sans-serif;}
 h4 {font-family: 'BlockFont'; font-size: 3em; text-align: center; }
 a {color: white;}
-a:hover {color: $lightBlue;  text-decoration: none;}
+a:hover {color: $orange;  text-decoration: none;}
 
 .main {background-color: $lightBlue; text-align: center;}
-.intro {padding-top: 8%;}
+.intro {padding-top: 8%;  }
 .web {background-color: $blue2;}
 .graphic {background-color: $blue3; margin: 0 auto;}
 .graphic-box {height: 500px;float: left; width: 49%; padding-left: 2%; padding-right: 2%;  margin-top: 20px;margin-left: 1%;}
 .product { background-color: $blue4;}
 .info {background-color: $darkGrey; text-align: center;}
-.info i {font-size: 4em; padding-left: 20px; padding-top: 30px;}
-.info i:hover {color: $blue4}
+.info i {transition: color 0.2s ease;font-size: 4em; padding-left: 20px; padding-top: 30px;}
+.info i:hover {transition: color 0.2s ease;color: $orange}
 .project { margin: 0 auto; margin-bottom: 30px; position: relative;}
 .words {
   position: relative;
@@ -45,9 +47,9 @@ a:hover {color: $lightBlue;  text-decoration: none;}
   padding: 20px 10px 20px 10px; 
   min-width: 400px; 
   text-align: center;
-  // -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
-  // -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
-  // box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
 }
 .words-graphic {
   background-color: $blue2;
@@ -101,6 +103,8 @@ a:hover {color: $lightBlue;  text-decoration: none;}
 .titles {font-family: 'BlockFont';}
 .icon {font-size: 1.5em;}
 .image {
+
+  transition: border 0.2s ease;
   position: relative; 
   z-index: 2; 
   margin: 0 auto;
@@ -108,11 +112,20 @@ a:hover {color: $lightBlue;  text-decoration: none;}
   width: 70%; 
   min-width: 400px; 
   overflow: hidden;
-  // -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
-  // -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
-  // box-shadow: 4px 0px 21px 0px rgba(18,18,18,0.3);
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(18,18,18,0.3);
 }
+.image:hover {
+  transition: border 0.2s ease;
+  border: 2px solid $orange;  
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.5);
+}
+.image img {width: 100%; min-width: 400px; float: left;}
 .image-graphic { 
+  transition: border 0.2s ease;
   position: relative; 
   z-index: 2; 
   margin: 0 auto;
@@ -121,56 +134,84 @@ a:hover {color: $lightBlue;  text-decoration: none;}
   float: left; 
   min-width: 400px; 
   overflow: hidden;
-  height: 250px;
+  max-height: 360px;
   background-color: $blue2;
-  // -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
-  // -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
-  // box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+}
+.image-graphic img {
+  width: 100%;
+}
+.image-graphic:hover {
+  transition: border 0.2s ease;
+  border: 2px solid $orange;  
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.5);
 }
 .image-graphic-show {
+  margin: 0 auto;
+  text-align: center;
   position: relative; 
   z-index: 2; 
   margin: 0 auto;
   border: 2px solid $blue2; 
-  width: 70%; 
+  width: 70%;
+ 
   min-width: 400px; 
-  overflow: hidden;
+  overflow: hidden;  
+  
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+  img {
+    width: 100%; min-width: 400px; float: left;
+  }
 }
 .image-product {
+  transition: border 0.2s ease;
   position: relative; 
   z-index: 2; 
   margin: 0 auto;
   border: 2px solid $blue3; 
-  width: 31%;
+  width: 100%;
   float: left; 
   min-width: 400px; 
   overflow: hidden;
+  max-height: 360px;
+  background-color: $blue3;
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+}
+.image-product:hover {
+  transition: border 0.2s ease;
+  border: 2px solid $orange;  
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.5);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.5);
 }
 .image-product-show {
+  margin: 0 auto;
+  text-align: center;
   position: relative; 
   z-index: 2; 
   margin: 0 auto;
   border: 2px solid $blue3; 
-  width: 70%; 
+  width: 70%;
+ 
   min-width: 400px; 
-  overflow: hidden;
+  overflow: hidden;  
+  
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(40,40,40,0.3);
+  box-shadow: 4px 0px 21px 0px rgba(40,40,40,0.3);
+  img {
+    width: 100%; min-width: 400px; float: left;
+  }
 }
-.image:hover {
-  border: 2px solid $lightBlue;
-  // -webkit-box-shadow: inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
-  // -moz-box-shadow:    inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
-  // box-shadow:         inset 0px 0px 28px 10px rgba(50, 50, 50, 0.75);
-}
-.image-graphic:hover {
-   -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.image-product:hover {
-  border: 2px solid $blue3;
-}
-.image img {width: 100%; min-width: 400px; float: left;}
-.image-graphic img {width: 100%; min-width: 400px; overflow: hidden;}
+.image-product img {width: 100%; min-width: 400px; overflow: hidden;}
 #name {float: right; margin-top: 10px; margin-right: 50px; display: block;}
 .show {
   padding-top: 100px;
@@ -214,34 +255,45 @@ a:hover {color: $lightBlue;  text-decoration: none;}
   .container{ margin: 0 auto;  /* Lets the background show on the left and 
   right edges of desktops */}
   .image {width: 70%;}
+  .image-graphic-show {width: 70%;}
+  .image-product-show {width: 70%;}
   // .graphic-box {width: 40%; margin-left: 9%;}
-  .image-graphic p {min-height: 175px; /* Compensates for shorter and longer paragraphs
-    so the Learn More button is at the same place in each section */ line-height: 1.25; }
+ 
   footer section { float: left; width: 25%; margin: 0em; padding: 0em;}
 }
 
 @media (min-width: 980px) and (max-width: 1200px) {
-  
+  .graphic-box { height: 420px;}
   .container{ margin: 0 auto;  /* Lets the background show on the left and 
   right edges of desktops */}
   .graphic { margin-left: 0; margin-right: 0; padding-left: 2%; padding-right: 0;}
   .image {width: 100%;}
+  .image-graphic-show {width: 70%;}
+  .image-product-show {width: 70%;}
   .words {width: 100%;}
-  .image-graphic { width: 100%;margin: 0 auto;}
+  .image-graphic { max-height: 250px;width: 100%;margin: 0 auto;}
+  .image-graphic img { width: 100%;}
+  .image-product { max-height: 250px;width: 100%;margin: 0 auto;}
+  .image-product img { height: 100%;}
+  .image-product { width: 100%;margin: 0 auto;}
   .words-graphic { width: 100%;margin: 0 auto;}
   .image-graphic p {min-height: 175px; /* Compensates for shorter and longer paragraphs
     so the Learn More button is at the same place in each section */ line-height: 1.25; }
-  footer section { float: left; width: 25%; margin: 0em; padding: 0em;}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
   
   .container { margin: 0 auto; width: 100%;}
   .image {width: 100%;}
+  .image-graphic-show {width: 70%; img {width: 100%; height: auto;}}
+  .image-product-show {width: 70%;}
+  
   .words {width: 100%;}
   .words-graphic {width: 100%;}
   .graphic-box {width: 100%; height: 100%; padding: 0;}
   .image-graphic { width: 100%;overflow: hidden; height: 400px; width: 100%;}
+  .image-graphic img { width: 100%;}
+  .image-product { width: 100%;overflow: hidden; height: 400px; width: 100%;}
   .image-graphic h2 { font-size: 1.5em;}
   .image-graphic p { line-height: 1.5; font-size: 1.25em; }
   .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
@@ -249,36 +301,43 @@ a:hover {color: $lightBlue;  text-decoration: none;}
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
+  .project-title-product {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
+  .project-desc {width: 70%;}
+  .caption {width: 100%;}
   .navbar-fixed-top {display: none;}
   .container{ margin: 0 auto; }
   .graphic-box {width: 100%; height: 100%;padding: 0; margin: 0;}
 
   .image-graphic { width: 100%; overflow: hidden; height: 100%;}
+  .image-product { width: 100%; overflow: hidden; height: 100%;}
   section {padding: 0;padding-bottom: 30px;}
   .image {width: 100%; padding: 0; margin: 0;}
-  .words {width: 100%;}
-  .words {background-color: $blue2;}
+  .image-graphic-show {width: 100%;padding: 0; margin: 0;}
+  .image-product-show {width: 100%;padding: 0; margin: 0;}
+  .words {width: 100%;background-color: $blue2;}
   .words-graphic {background-color: $blue3;}
+  .words-product {background-color: $blue4;}
   .project {margin: 0 auto; padding: 0;}
   .image-graphic p { min-height: 150px;}
   .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
   footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
-  .words {border: none;}
 
 }
 
 
 
 @media (max-width: 480px) {
-  .image {width: 100%; padding: 0; margin: 0;}
-  .image-graphic { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;}
-  .image-product { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;}
+  .image {width: 100%; padding: 0; margin: 0;z-index: 10;}
+  .image-graphic { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
+  .image-product { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
+  .words {border: none; background-color: $blue2; width: 100%;}
   .words-graphic {background-color: $blue3;}
+  .words-product {background-color: $blue4;}
   .graphic-box {height: 100%; width: 100%; padding: 0; margin: 0;}
   .project {margin: 0; padding: 0;}
   .navbar-fixed-top {display: none;}
   .container {margin: 0 auto; width: 100%;}
   section {padding: 0;padding-bottom: 30px;}
-  .words {border: none; margin-top: 0;}
+ 
 
 }

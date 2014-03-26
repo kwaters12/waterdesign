@@ -32,8 +32,8 @@ Waterdesign::Application.configure do
   :storage => :s3,
   :s3_credentials => {
     :bucket => ENV['waterdesign.ca'],
-    :access_key_id => ENV['AKIAIA4HCVTFS2CJLQBA'],
-    :secret_access_key => ENV['Au7B7s7LwBwKYkcnh8o6dHdE9rwYY6WbYZ9REvU']
+    :access_key_id => ENV['AKIAISQWLDVKDQMHCU3Q'],
+    :secret_access_key => ENV['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']
   }
   }
 end
