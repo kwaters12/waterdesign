@@ -21,6 +21,7 @@ gem 'delayed_job_active_record'
 gem 'rails-erd'
 gem 'font-awesome-sass'
 gem 'hirb'
+gem 'google-analytics-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

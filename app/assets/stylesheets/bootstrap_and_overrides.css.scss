@@ -29,7 +29,7 @@ a {color: white; transition: color 0.2s ease;transition: background-color 0.2s e
 a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; transition: background-color 0.2s ease;}
 
 .main {background-color: $lightBlue; text-align: center; transition: color 0.2s ease;}
-.intro {padding-top: 8%;  }
+.intro {padding-top: 20%;  }
 .web {background-color: $blue2;}
 .graphic {background-color: $blue3; margin: 0 auto;}
 .graphic-box {height: 500px;float: left; width: 49%; padding-left: 2%; padding-right: 2%;  margin-top: 20px;margin-left: 1%;}
@@ -70,7 +70,7 @@ a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; tr
 .title-graphic {background: $blue2; color: $blue3; }
 .title-product {background: $blue3; color: $blue4; }
 .title-info{background: $blue4; color: $darkGrey; }
-.peace {padding-top: 10%;}
+.peace {padding-top: 20%;}
 
 .container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
 .navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px; color: red;}
@@ -258,6 +258,7 @@ a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; tr
   .container{ margin: 0 auto;  /* Lets the background show on the left and 
   right edges of desktops */}
   .graphic { margin-left: 0; margin-right: 0; padding-left: 2%; padding-right: 0;}
+  .product { margin-left: 0; margin-right: 0; padding-left: 2%; padding-right: 0;}
   .image {width: 100%;}
   .image-graphic-show {width: 70%;}
   .image-product-show {width: 70%;}

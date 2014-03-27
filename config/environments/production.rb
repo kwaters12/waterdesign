@@ -77,6 +77,8 @@ Waterdesign::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  # Connect Paperclip to S3
   config.paperclip_defaults = {
   :storage => :s3,
   :s3_credentials => {
@@ -85,5 +87,8 @@ Waterdesign::Application.configure do
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
   }
+
+  # replace this with your tracker code
+  GA.tracker = "UA-49456418-1"
 
 end
