@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :find_project, except: [:index, :create, :new]
 
   def index
-    @projects = Project.all
+    @projects = Project.order("created_at DESC").all
   end
 
   def new
@@ -11,7 +11,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = current_user.projects.new project_params     
+    @project = Project.new project_params     
     # @project.document = @project.documents.create!(params.require(:document).permit([:direct_upload_url]))
     # render nothing: true
     if @project.save
@@ -52,7 +52,7 @@ class ProjectsController < ApplicationController
   private
 
   def find_project
-    @project = current_user.projects.find(params[:id])
+    @project = Project.find(params[:id])
   end
 
 end
