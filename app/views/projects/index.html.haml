@@ -36,7 +36,6 @@
           %br
           <strong>Tech: </strong>
           = project.tech
-          %br
           - if current_user && current_user.is_admin
             = link_to "edit", edit_project_path(project)
             = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
@@ -65,7 +64,7 @@
             %br
             <strong>Tech: </strong>
             = project.tech
-            %br
+            
             - if current_user && current_user.is_admin
               = link_to "edit", edit_project_path(project)
               = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
@@ -90,7 +89,6 @@
           %br
           <strong>Tech: </strong>
           = project.tech
-          %br
           - if current_user && current_user.is_admin
             = link_to "edit", edit_project_path(project)
             = link_to 'delete', project, method: :delete, data: { confirm: 'Are you sure?' }
