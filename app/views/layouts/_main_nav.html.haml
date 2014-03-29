@@ -49,11 +49,11 @@
         = link_to root_url do
           %i.fa.fa-tumblr
     
-  - if current_user && current_user.is_admin
-    %li
-      = link_to "NEW PROJECT", new_project_path
-    %li
-      = link_to "SIGN OUT", destroy_user_session_path, method: :delete 
+    - if current_user && current_user.is_admin
+      %li
+        = link_to "NEW PROJECT", new_project_path
+      %li
+        = link_to "SIGN OUT", destroy_user_session_path, method: :delete 
 :javascript
   $('#web').waypoint(function(direction) {
       if (direction === 'down') {
