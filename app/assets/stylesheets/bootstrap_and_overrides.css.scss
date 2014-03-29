@@ -27,6 +27,29 @@ h3 strong {font-family: 'Vegur', sans-serif;}
 h4 {font-family: 'BlockFont'; font-size: 3em; text-align: center; }
 a {color: white; transition: color 0.2s ease;transition: background-color 0.2s ease;}
 a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; transition: background-color 0.2s ease;}
+li a:hover {background-color: white;}
+
+.container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
+.navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px; color: red;}
+.navbar-fixed-top {padding: 0; background-color: $darkGrey;}
+.navbar-nav {margin-bottom: -1px;}
+.navbar .nav > li > a {
+  background-color: $lightBlue;
+  color: white;
+  padding-bottom: -40px;
+}
+
+#main-nav {background-color: $lightBlue; padding-bottom: 20px; ::hover { background-color: white;}}
+#main-nav:hover { background-color: white;}
+#web-nav {background-color: $blue2; padding-bottom: 20px;}
+#web-nav:hover {background-color: white;}
+#graphic-nav {background-color: $blue3; padding-bottom: 20px;}
+#graphic-nav:hover {background-color: white;}
+#product-nav {background-color: $blue4; padding-bottom: 20px;}
+#product-nav:hover {background-color: white;}
+.titles {font-family: 'BlockFont';}
+.titles a:hover {background-color: white;}
+.icon {font-size: 1.5em; }
 
 .main {background-color: $lightBlue; text-align: center; transition: color 0.2s ease;}
 .intro {padding-top: 10%;  }
@@ -72,23 +95,11 @@ a:hover {color: $orange;  text-decoration: none; transition: color 0.2s ease; tr
 .title-info{background: $blue4; color: $darkGrey; }
 .peace {padding-top: 10%;}
 
-.container {width: 100%;padding: 0; margin: 0 auto; background-image:url('http://waterdesign.s3.amazonaws.com/squared_metal.png'); height: 100%;}
-.navbar {border-radius: 0; padding: 0; margin-bottom: 0;padding-top: 10px; color: red;}
-.navbar-fixed-top {padding: 0; background-color: $darkGrey;}
-.navbar .nav > li > a {
-  background-color: $lightBlue;
-  color: white;
-}
 
-#main-nav {background-color: $lightBlue; padding-bottom: 20px;}
-#web-nav {background-color: $blue2; padding-bottom: 20px;}
-#graphic-nav {background-color: $blue3; padding-bottom: 20px;}
-#product-nav {background-color: $blue4; padding-bottom: 20px;}
 .web-scroll {background-color: red;}
 .clear { clear: both; display: inline-block;}
 .clear { clear: both; }
-.titles {font-family: 'BlockFont';}
-.icon {font-size: 1.5em;}
+
 .image {
 
   transition: border 0.2s ease;
