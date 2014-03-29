@@ -6,28 +6,54 @@
       - else
         = link_to "KW", root_url, id: "main-nav"
     %li
-      %a{href: "#web", id: "web-nav"} WEB
+      - if request.original_url === root_url
+        %a{href: "#web", id: "web-nav"} WEB
+      - else
+        = link_to "WEB", root_url, id: "web-nav"
     %li
-      %a{href: "#graphic", id: "graphic-nav"} GRAPHIC 
+      - if request.original_url === root_url
+        %a{href: "#graphic", id: "graphic-nav"} GRAPHIC 
+      - else
+        = link_to "GRAPHIC", root_url, id: "graphic-nav"
     %li
-      %a{href: "#product", id: "product-nav"} PRODUCT
+      - if request.original_url === root_url
+        %a{href: "#product", id: "product-nav"} PRODUCT
+      - else
+        = link_to "PRODUCT", root_url, id: "product-nav"
     %li.icon
-      %a{href: "#contact" }
-        %i.fa.fa-github
+      - if request.original_url === root_url
+        %a{href: "#contact" }
+          %i.fa.fa-github
+      - else
+        = link_to root_url do
+          %i.fa.fa-github
     %li.icon
-      %a{href: "#contact"}
-        %i.fa.fa-linkedin
+      - if request.original_url === root_url
+        %a{href: "#contact"}
+          %i.fa.fa-linkedin
+      - else
+        = link_to root_url do
+          %i.fa.fa-linkedin
     %li.icon
-      %a{href: "#contact"}
-        %i.fa.fa-twitter 
+      - if request.original_url === root_url
+        %a{href: "#contact"}
+          %i.fa.fa-twitter 
+      - else
+        = link_to root_url do
+          %i.fa.fa-twitter
     %li.icon
-      %a{href: "#contact"}
-        %i.fa.fa-tumblr
+      - if request.original_url === root_url
+        %a{href: "#contact"}
+          %i.fa.fa-tumblr
+      - else
+        = link_to root_url do
+          %i.fa.fa-tumblr
     
-    - if current_user && current_user.is_admin
-      %li
-        = link_to "NEW PROJECT", new_project_path
-        = link_to "SIGN OUT", destroy_user_session_path, method: :delete 
+  - if current_user && current_user.is_admin
+    %li
+      = link_to "NEW PROJECT", new_project_path
+    %li
+      = link_to "SIGN OUT", destroy_user_session_path, method: :delete 
 :javascript
   $('#web').waypoint(function(direction) {
       if (direction === 'down') {
