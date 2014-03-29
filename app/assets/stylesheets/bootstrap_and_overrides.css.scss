@@ -329,7 +329,7 @@ li a:hover {background-color: white;}
   .caption {width: 100%;}
   .navbar-fixed-top {display: none;}
   .container{ margin: 0 auto; }
-  .graphic-box {width: 100%; height: 100%;padding: 0; margin: 0;}
+  .graphic-box {width: 100%; height: 100%;padding: 0; margin: 0; margin-bottom: 20px;}
   .show {padding-top: 10px;}
   .image-graphic { width: 100%; overflow: hidden; height: 100%;}
   .image-product { width: 100%; overflow: hidden; height: 100%;}
@@ -337,8 +337,11 @@ li a:hover {background-color: white;}
   .image {width: 100%; padding: 0; margin: 0;}
   .image-graphic-show {width: 100%;padding: 0; margin: 0;}
   .image-product-show {width: 100%;padding: 0; margin: 0;}
-  .words {width: 100%; left: 0;}
-  .words-graphic {background-color: $blue3;}
+  .words {width: 100%; left: 0;font-size: 0.8em;}
+  .words-graphic {background-color: $blue3;font-size: 0.8em;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
   .words-product {background-color: $blue4;}
   .project {margin: 0 auto; padding: 0; margin-bottom: 20px;}
   .image-graphic p { min-height: 150px;}
@@ -365,7 +368,8 @@ li a:hover {background-color: white;}
   .words-graphic {background-color: $blue3;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;font-size: 0.8em;}
+    box-shadow: none;
+    font-size: 0.8em;}
   .words-product {background-color: $blue4;}
   .graphic-box {height: 100%; width: 100%; padding: 0; margin: 0;margin-bottom: 20px;}
   .project {margin: 0; padding: 0; margin-bottom: 20px; }
