@@ -50,7 +50,7 @@
           - if project.documents.count > 0
             .image-graphic
               = link_to (image_tag project.documents.first.direct_upload_url), project
-          .words.words-graphic
+          .words-graphic
             <strong>Title: </strong> 
             - if project.user === current_user         
               = link_to "#{project.title}", project_path(project)
@@ -78,7 +78,7 @@
         - if project.documents.count > 0
           .image-product     
             = link_to (image_tag project.documents.first.direct_upload_url), project         
-        .words.words-graphic.words-product
+        .words2.words-graphic.words-product
           <strong>Title: </strong>          
           = link_to "#{project.title}", project_path(project)
           %br
@@ -126,6 +126,24 @@
           return false;
         }
       }
+    });
+  });
+  $(document).ready(function(){
+    $('.project').on('mouseenter', function(){
+      // alert("GOOOVEL");
+      $(this).find('.words').slideToggle();
+    });
+    $('.project').on('mouseleave', function(){
+      // alert("GOOOVEL");
+      $(this).find('.words').slideToggle();
+    });
+    $('.graphic-box').on('mouseenter', function(){
+      // alert("GOOOVEL");
+      $(this).find('.words-graphic').slideToggle();
+    });
+    $('.graphic-box').on('mouseleave', function(){
+      // alert("GOOOVEL");
+      $(this).find('.words-graphic').slideToggle();
     });
   });
 

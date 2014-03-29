@@ -1,6 +1,7 @@
 @import 'bootstrap';
 
 $lightBlue: #11a3ef;
+$lightBlueHalf: rgba(17,163,239,0.9);
 $blue2: #084C6F;
 $blue3: #0E81BC;
 $blue4: #5BC1F4;
@@ -55,14 +56,18 @@ li a:hover {background-color: white;}
 .intro {padding-top: 10%;  }
 .web {background-color: $blue2;}
 .graphic {background-color: $blue3; margin: 0 auto;}
-.graphic-box {height: 500px;float: left; width: 49%; padding-left: 2%; padding-right: 2%;  margin-top: 20px;margin-left: 1%;}
+.graphic-box {height: 440px;float: left; width: 49%; padding-left: 2%; padding-right: 2%;  margin-top: 20px;margin-left: 1%;}
 .product { background-color: $blue4;}
 .info {background-color: $darkGrey; text-align: center;}
 .info i {transition: color 0.2s ease;font-size: 4em; padding-left: 20px; padding-top: 30px;}
 .info i:hover {transition: color 0.2s ease;color: $orange}
 .project { margin: 0 auto; margin-bottom: 30px; position: relative;}
 .words {
-  position: relative;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  display: none;  
   z-index: 3; 
   width: 70%; 
   margin: 0 auto; 
@@ -75,13 +80,25 @@ li a:hover {background-color: white;}
   box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
 }
 .words-graphic {
+  position: relative;
+
+  z-index: 3;
+  display: none;
+  padding: 10px 10px 20px 10px; 
+  text-align: center;
   background-color: $blue2;
- width: 100%;
- float: left;
- height: 150px;
+  width: 100%;
+  float: left;
+  height: 100px;
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
 }
 .words-product {
   background-color: $blue3;
+  -webkit-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  -moz-box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
+  box-shadow: 4px 4px 21px 0px rgba(18,18,18,0.3);
 }
 
 .title {width: 400px; margin: 0 auto; padding-top: 20px; padding-bottom: 20px; margin-bottom: 40px;
@@ -265,7 +282,7 @@ li a:hover {background-color: white;}
 }
 
 @media (min-width: 980px) and (max-width: 1200px) {
-  .graphic-box { height: 420px;}
+  .graphic-box { height: 280px;}
   .container{ margin: 0 auto;  /* Lets the background show on the left and 
   right edges of desktops */}
   .graphic { margin-left: 0; margin-right: 0; padding-left: 2%; padding-right: 0;}
@@ -273,7 +290,7 @@ li a:hover {background-color: white;}
   .image {width: 100%;}
   .image-graphic-show {width: 70%;}
   .image-product-show {width: 70%;}
-  .words {width: 100%;}
+  .words {width: 100%; left: 0;}
   .image-graphic { max-height: 250px;width: 100%;margin: 0 auto;}
   .image-graphic img { width: 100%;}
   .image-product { max-height: 250px;width: 100%;margin: 0 auto;}
@@ -320,10 +337,10 @@ li a:hover {background-color: white;}
   .image {width: 100%; padding: 0; margin: 0;}
   .image-graphic-show {width: 100%;padding: 0; margin: 0;}
   .image-product-show {width: 100%;padding: 0; margin: 0;}
-  .words {width: 100%;background-color: $blue2;}
+  .words {width: 100%; left: 0;}
   .words-graphic {background-color: $blue3;}
   .words-product {background-color: $blue4;}
-  .project {margin: 0 auto; padding: 0;}
+  .project {margin: 0 auto; padding: 0; margin-bottom: 20px;}
   .image-graphic p { min-height: 150px;}
   .button {font-weight: bold; font-size: 1em; text-transform: uppercase; }
   footer section { float: left; width: 50%; margin: 0em; padding: 0em; }
@@ -338,16 +355,19 @@ li a:hover {background-color: white;}
 
 @media (max-width: 480px) {
   .home {display: block;}
-  .image {width: 100%; padding: 0; margin: 0;z-index: 10;}
+  .image {width: 100%; padding: 0; margin: 0;}
   .image-graphic { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
   .image-product { width: 100%; overflow: hidden; height: 100%; padding: 0; margin: 0;z-index: 10;}
   .image-graphic-show {width: 100%;padding: 0; margin: 0;}
   .image-product-show {width: 100%;padding: 0; margin: 0;}
-  .words {border: none; background-color: $blue2; width: 100%;}
-  .words-graphic {background-color: $blue3;}
+  .words {width: 100%; left: 0;position: relative; height: 120px;}
+  .words-graphic {background-color: $blue3;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;}
   .words-product {background-color: $blue4;}
-  .graphic-box {height: 100%; width: 100%; padding: 0; margin: 0;}
-  .project {margin: 0; padding: 0;}
+  .graphic-box {height: 100%; width: 100%; padding: 0; margin: 0;margin-bottom: 20px;}
+  .project {margin: 0; padding: 0; margin-bottom: 20px; }
   .navbar-fixed-top {display: none;}
   .container {margin: 0 auto; width: 100%;}
   section {padding: 0;padding-bottom: 30px;}
