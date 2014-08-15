@@ -1,15 +1,11 @@
 class DocumentsController < ApplicationController
+  
   def create
-    # Rails.logger.info ">>>>>>>>>>"
-    # Rails.logger.info params
-    # Rails.logger.info ">>>>>>>>>>"
-    # Rails.logger.info params.require(:document).permit([:direct_upload_url])
-    # Rails.logger.info ">>>>>>>>>>"
-    @project = current_user.projects.find(session[:project_id])
+    @project = Project.find(session[:project_id])
     @document = @project.documents.new(params.require(:document).permit([:direct_upload_url, :user_id, :caption]))
     @document.user_id = current_user.id
     @document.save
-    render nothing: true
+    # render nothing: true
   end
 
   def edit
@@ -35,5 +31,7 @@ class DocumentsController < ApplicationController
       redirect_to project_path(@project, @document), notice: "Could not delete this image."      
     end    
   end
+
+
 
 end

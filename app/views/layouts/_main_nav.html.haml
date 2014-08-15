@@ -24,30 +24,35 @@
       - if request.original_url === root_url
         %a{href: "#contact" }
           %i.fa.fa-github
-      - else
-        = link_to root_url do
-          %i.fa.fa-github
+      - else        
+        %a{href: "http://www.github.com/kwaters12"}
+          %i.fa.fa-github  
     %li.icon
       - if request.original_url === root_url
         %a{href: "#contact"}
           %i.fa.fa-linkedin
       - else
-        = link_to root_url do
+        %a{href: "http://www.linkedin.com/pub/kelly-waters/13/611/794"}
           %i.fa.fa-linkedin
     %li.icon
       - if request.original_url === root_url
         %a{href: "#contact"}
           %i.fa.fa-twitter 
       - else
-        = link_to root_url do
-          %i.fa.fa-twitter
+        %a{href: "http://www.twitter.com/kellyminjaro"}
+          %i.fa.fa-twitter 
     %li.icon
       - if request.original_url === root_url
         %a{href: "#contact"}
           %i.fa.fa-tumblr
       - else
-        = link_to root_url do
+        %a{href: "http://kellywaters.tumblr.com/"}
           %i.fa.fa-tumblr
+    / %li
+    /   - if request.original_url === root_url
+    /     %a{href: "#blog", id: "web-nav"} BLOG
+    /   - else
+    /     = link_to "BLOG", root_url, id: "blog-nav"
     
     - if current_user && current_user.is_admin
       %li

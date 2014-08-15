@@ -301,7 +301,7 @@ li a:hover {background-color: white;}
     so the Learn More button is at the same place in each section */ line-height: 1.25; }
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 720px) and (max-width: 979px) {
   
   .container { margin: 0 auto; width: 100%;}
   .image {width: 100%;}
@@ -321,7 +321,7 @@ li a:hover {background-color: white;}
 
 }
 
-@media (min-width: 481px) and (max-width: 767px) {
+@media (min-width: 481px) and (max-width: 719px) {
   .home {display: block;}
   .project-title-product {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
   .project-title-graphic {width: 100%; padding: 0; margin: 0; padding-top: 10px;}
@@ -338,7 +338,8 @@ li a:hover {background-color: white;}
   .image-graphic-show {width: 100%;padding: 0; margin: 0;}
   .image-product-show {width: 100%;padding: 0; margin: 0;}
   .words {width: 100%; left: 0;font-size: 0.8em;}
-  .words-graphic {background-color: $blue3;font-size: 0.8em;
+  .words-graphic {background-color: $blue3;
+    font-size: 0.8em;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;}

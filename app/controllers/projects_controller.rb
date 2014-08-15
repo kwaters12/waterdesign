@@ -23,6 +23,10 @@ class ProjectsController < ApplicationController
 
   def show
     session[:project_id] = @project.id
+
+    Rails.logger.info("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+    Rails.logger.info(session[:project_id])
+    Rails.logger.info("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
   end
 
   def edit
